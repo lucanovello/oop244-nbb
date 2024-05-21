@@ -3,8 +3,40 @@
   "WorkspaceRootPath": "C:\\Storage\\SCHOOL\\summer-2024\\oop244-nbb\\workshops\\ws1\\lab-p1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B0331532-7D52-424C-9E0B-76CFABF5A088}|lab-p1.vcxproj|C:\\Storage\\SCHOOL\\summer-2024\\oop244-nbb\\workshops\\ws1\\lab-p1\\w1p1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{B0331532-7D52-424C-9E0B-76CFABF5A088}|lab-p1.vcxproj|solutionrelative:w1p1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{B0331532-7D52-424C-9E0B-76CFABF5A088}|lab-p1.vcxproj|C:\\Storage\\SCHOOL\\summer-2024\\oop244-nbb\\workshops\\ws1\\lab-p1\\shoppingListApp.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B0331532-7D52-424C-9E0B-76CFABF5A088}|lab-p1.vcxproj|solutionrelative:shoppingListApp.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0331532-7D52-424C-9E0B-76CFABF5A088}|lab-p1.vcxproj|C:\\Storage\\SCHOOL\\summer-2024\\oop244-nbb\\workshops\\ws1\\lab-p1\\ShoppingRec.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B0331532-7D52-424C-9E0B-76CFABF5A088}|lab-p1.vcxproj|solutionrelative:ShoppingRec.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0331532-7D52-424C-9E0B-76CFABF5A088}|lab-p1.vcxproj|C:\\Storage\\SCHOOL\\summer-2024\\oop244-nbb\\workshops\\ws1\\lab-p1\\ShoppingRec.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B0331532-7D52-424C-9E0B-76CFABF5A088}|lab-p1.vcxproj|solutionrelative:ShoppingRec.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0331532-7D52-424C-9E0B-76CFABF5A088}|lab-p1.vcxproj|C:\\Storage\\SCHOOL\\summer-2024\\oop244-nbb\\workshops\\ws1\\lab-p1\\ShoppingList.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B0331532-7D52-424C-9E0B-76CFABF5A088}|lab-p1.vcxproj|solutionrelative:ShoppingList.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0331532-7D52-424C-9E0B-76CFABF5A088}|lab-p1.vcxproj|C:\\Storage\\SCHOOL\\summer-2024\\oop244-nbb\\workshops\\ws1\\lab-p1\\ShoppingList.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B0331532-7D52-424C-9E0B-76CFABF5A088}|lab-p1.vcxproj|solutionrelative:ShoppingList.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0331532-7D52-424C-9E0B-76CFABF5A088}|lab-p1.vcxproj|C:\\Storage\\SCHOOL\\summer-2024\\oop244-nbb\\workshops\\ws1\\lab-p1\\File.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B0331532-7D52-424C-9E0B-76CFABF5A088}|lab-p1.vcxproj|solutionrelative:File.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0331532-7D52-424C-9E0B-76CFABF5A088}|lab-p1.vcxproj|C:\\Storage\\SCHOOL\\summer-2024\\oop244-nbb\\workshops\\ws1\\lab-p1\\File.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B0331532-7D52-424C-9E0B-76CFABF5A088}|lab-p1.vcxproj|solutionrelative:File.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0331532-7D52-424C-9E0B-76CFABF5A088}|lab-p1.vcxproj|C:\\Storage\\SCHOOL\\summer-2024\\oop244-nbb\\workshops\\ws1\\lab-p1\\Utils.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B0331532-7D52-424C-9E0B-76CFABF5A088}|lab-p1.vcxproj|solutionrelative:Utils.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0331532-7D52-424C-9E0B-76CFABF5A088}|lab-p1.vcxproj|C:\\Storage\\SCHOOL\\summer-2024\\oop244-nbb\\workshops\\ws1\\lab-p1\\Utils.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B0331532-7D52-424C-9E0B-76CFABF5A088}|lab-p1.vcxproj|solutionrelative:Utils.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,20 +46,126 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "w1p1.cpp",
-              "DocumentMoniker": "C:\\Storage\\SCHOOL\\summer-2024\\oop244-nbb\\workshops\\ws1\\lab-p1\\w1p1.cpp",
-              "RelativeDocumentMoniker": "w1p1.cpp",
-              "ToolTip": "C:\\Storage\\SCHOOL\\summer-2024\\oop244-nbb\\workshops\\ws1\\lab-p1\\w1p1.cpp",
-              "RelativeToolTip": "w1p1.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACIAAAAmAAAA",
+              "Title": "shoppingListApp.cpp",
+              "DocumentMoniker": "C:\\Storage\\SCHOOL\\summer-2024\\oop244-nbb\\workshops\\ws1\\lab-p1\\shoppingListApp.cpp",
+              "RelativeDocumentMoniker": "shoppingListApp.cpp",
+              "ToolTip": "C:\\Storage\\SCHOOL\\summer-2024\\oop244-nbb\\workshops\\ws1\\lab-p1\\shoppingListApp.cpp*",
+              "RelativeToolTip": "shoppingListApp.cpp*",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-05-12T02:14:06.036Z",
+              "WhenOpened": "2024-05-21T16:53:18.628Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "File.cpp",
+              "DocumentMoniker": "C:\\Storage\\SCHOOL\\summer-2024\\oop244-nbb\\workshops\\ws1\\lab-p1\\File.cpp",
+              "RelativeDocumentMoniker": "File.cpp",
+              "ToolTip": "C:\\Storage\\SCHOOL\\summer-2024\\oop244-nbb\\workshops\\ws1\\lab-p1\\File.cpp",
+              "RelativeToolTip": "File.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-05-21T16:53:34.344Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "File.h",
+              "DocumentMoniker": "C:\\Storage\\SCHOOL\\summer-2024\\oop244-nbb\\workshops\\ws1\\lab-p1\\File.h",
+              "RelativeDocumentMoniker": "File.h",
+              "ToolTip": "C:\\Storage\\SCHOOL\\summer-2024\\oop244-nbb\\workshops\\ws1\\lab-p1\\File.h",
+              "RelativeToolTip": "File.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-05-21T16:53:40.407Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ShoppingList.cpp",
+              "DocumentMoniker": "C:\\Storage\\SCHOOL\\summer-2024\\oop244-nbb\\workshops\\ws1\\lab-p1\\ShoppingList.cpp",
+              "RelativeDocumentMoniker": "ShoppingList.cpp",
+              "ToolTip": "C:\\Storage\\SCHOOL\\summer-2024\\oop244-nbb\\workshops\\ws1\\lab-p1\\ShoppingList.cpp",
+              "RelativeToolTip": "ShoppingList.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-05-21T16:53:51.211Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ShoppingList.h",
+              "DocumentMoniker": "C:\\Storage\\SCHOOL\\summer-2024\\oop244-nbb\\workshops\\ws1\\lab-p1\\ShoppingList.h",
+              "RelativeDocumentMoniker": "ShoppingList.h",
+              "ToolTip": "C:\\Storage\\SCHOOL\\summer-2024\\oop244-nbb\\workshops\\ws1\\lab-p1\\ShoppingList.h",
+              "RelativeToolTip": "ShoppingList.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-05-21T16:53:57.818Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ShoppingRec.cpp",
+              "DocumentMoniker": "C:\\Storage\\SCHOOL\\summer-2024\\oop244-nbb\\workshops\\ws1\\lab-p1\\ShoppingRec.cpp",
+              "RelativeDocumentMoniker": "ShoppingRec.cpp",
+              "ToolTip": "C:\\Storage\\SCHOOL\\summer-2024\\oop244-nbb\\workshops\\ws1\\lab-p1\\ShoppingRec.cpp",
+              "RelativeToolTip": "ShoppingRec.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-05-21T16:54:17.261Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ShoppingRec.h",
+              "DocumentMoniker": "C:\\Storage\\SCHOOL\\summer-2024\\oop244-nbb\\workshops\\ws1\\lab-p1\\ShoppingRec.h",
+              "RelativeDocumentMoniker": "ShoppingRec.h",
+              "ToolTip": "C:\\Storage\\SCHOOL\\summer-2024\\oop244-nbb\\workshops\\ws1\\lab-p1\\ShoppingRec.h",
+              "RelativeToolTip": "ShoppingRec.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-05-21T16:54:07.362Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Utils.cpp",
+              "DocumentMoniker": "C:\\Storage\\SCHOOL\\summer-2024\\oop244-nbb\\workshops\\ws1\\lab-p1\\Utils.cpp",
+              "RelativeDocumentMoniker": "Utils.cpp",
+              "ToolTip": "C:\\Storage\\SCHOOL\\summer-2024\\oop244-nbb\\workshops\\ws1\\lab-p1\\Utils.cpp",
+              "RelativeToolTip": "Utils.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-05-21T16:54:32.373Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Utils.h",
+              "DocumentMoniker": "C:\\Storage\\SCHOOL\\summer-2024\\oop244-nbb\\workshops\\ws1\\lab-p1\\Utils.h",
+              "RelativeDocumentMoniker": "Utils.h",
+              "ToolTip": "C:\\Storage\\SCHOOL\\summer-2024\\oop244-nbb\\workshops\\ws1\\lab-p1\\Utils.h",
+              "RelativeToolTip": "Utils.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-05-21T16:54:26.439Z"
             }
           ]
         }

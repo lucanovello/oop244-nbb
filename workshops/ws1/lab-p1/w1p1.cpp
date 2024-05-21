@@ -264,8 +264,6 @@ bool listIsEmpty() {
    return noOfRecs == 0;
 }
 
-
-
 void displayList() {
    for (int i = 0; i < noOfRecs; i++) {
       cout << (i + 1) << "-";
