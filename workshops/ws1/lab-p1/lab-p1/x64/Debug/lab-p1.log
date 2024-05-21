@@ -1,2 +1,7 @@
-﻿  shoppingListApp.cpp
+﻿  File.cpp
+  ShoppingList.cpp
+  shoppingListApp.cpp
+  ShoppingRec.cpp
+  Utils.cpp
+  Generating Code...
   lab-p1.vcxproj -> C:\Storage\SCHOOL\summer-2024\oop244-nbb\workshops\ws1\lab-p1\x64\Debug\lab-p1.exe

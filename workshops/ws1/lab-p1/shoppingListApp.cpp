@@ -2,7 +2,9 @@
 #include <cstdlib>
 #include "File.h"
 #include "ShoppingList.h"
+#include "ShoppingRec.h"
 #include "Utils.h"
+
 using namespace std;
 using namespace seneca;
 
