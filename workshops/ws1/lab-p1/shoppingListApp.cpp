@@ -4,7 +4,7 @@
 #include "ShoppingList.h"
 #include "Utils.h"
 using namespace std;
-//using namespace seneca;
+using namespace seneca;
 
 int listMenu();
 
