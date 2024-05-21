@@ -5,6 +5,7 @@
 #include "Utils.h"
 
 using namespace std;
+using namespace seneca;
 
 ShoppingRec recs[MAX_NO_OF_RECS] = {};
 int noOfRecs = 0;

@@ -5,6 +5,7 @@
 #include "Utils.h"
 
 using namespace std;
+using namespace seneca;
 
 ShoppingRec getShoppingRec() {
     ShoppingRec R = {};

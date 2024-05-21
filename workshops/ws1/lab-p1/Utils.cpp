@@ -2,6 +2,7 @@
 #include "Utils.h"
 
 using namespace std;
+using namespace seneca;
 
 void flushkeys() {
     while (cin.get() != '\n');

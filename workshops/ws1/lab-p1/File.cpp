@@ -5,6 +5,7 @@
 #include "ShoppingRec.h"
 
 using namespace std;
+using namespace seneca;
 
 const char* const SHOPPING_DATA_FILE = "shoppinglist.csv";
 FILE* sfptr = nullptr;
