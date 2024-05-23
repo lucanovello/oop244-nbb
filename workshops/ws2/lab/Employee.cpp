@@ -78,7 +78,7 @@ namespace seneca {
 
 	void display() {
 		std::cout << "Employee Salary report, sorted by employee number" << std::endl;
-		std::cout << "no- Emp no, Name, Salary" << std::endl;
+		std::cout << "no- Empno, Name, Salary" << std::endl;
 		std::cout << "------------------------------------------------" << std::endl;
 
 		sort();
