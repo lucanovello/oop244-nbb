@@ -1,0 +1,4 @@
+The workshop asked us to complete an Employees Salary Report program, which involved dynamically managing employee records, reading from a file, sorting the data, and then displaying it. To complete this workshop, we focused on dynamically allocating memory to arrays, as well as using pointers and references and some material we learned in about i/o operations in IPC144.  This workshop was really helpful in understanding the need to dynamically allocate memory so we can use the exact amount of memory needed, no more no less, as well as understanding how to create and delete objects using those specifications.  My goal going forward is to solidify my understanding of these fundamental concepts as they help to form the foundation of C++ and object oriented programming.
+
+Luca Novello
+038515003

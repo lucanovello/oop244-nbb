@@ -20,15 +20,13 @@ namespace seneca {
    void closeFile() {
       if (fptr) fclose(fptr);
    }
-   /* TODO: read functions go here    
-   bool read(................) {
-      return .....
+   bool read(char *name) {
+       return fscanf(fptr, "%[^\n]\n", name) == 1;
    }
-   bool read(................) {
-      return .....
+   bool read(int &empNumber) {
+       return fscanf(fptr, "%d,", &empNumber) == 1;
    }
-   bool read(................) {
-      return .....
+   bool read(double &salary) {
+       return fscanf(fptr, "%lf,", &salary) == 1;
    }
-   */
 }
