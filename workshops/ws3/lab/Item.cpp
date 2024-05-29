@@ -13,7 +13,7 @@ namespace seneca {
 	void Item::setName(const char* name) {
 		if (name != nullptr && name[0] != '\0') {
 			strncpy(m_itemName, name, MAX_ITEMNAME_LENGTH);
-			m_itemName[MAX_ITEMNAME_LENGTH-1] = '\0';
+			m_itemName[MAX_ITEMNAME_LENGTH] = '\0';
 		}
 		else {
 			m_itemName[0] = '\0';
