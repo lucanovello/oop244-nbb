@@ -1,9 +1,16 @@
+// Workshop 3: 
+// Name: Luca Novello
+// Student No: 038515003
+// Class: OOP244_NBB
+/////////////////////////////////////////////
 #ifndef SENECA_BILL_H_
 #define SENECA_BILL_H_
 #include "Item.h"
 namespace seneca {
+	const int MAX_TITLE_LENGTH = 36;
+
 	class Bill {
-		char m_title[37];
+		char m_title[MAX_TITLE_LENGTH + 1];
 		Item* m_items;
 		int m_noOfItems;
 		int m_itemsAdded;

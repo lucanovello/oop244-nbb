@@ -1,3 +1,9 @@
+// Workshop 3: 
+// Name: Luca Novello
+// Student No: 038515003
+// Class: OOP244_NBB
+/////////////////////////////////////////////
+#define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
 #include <cstring>
 #include "Item.h"
@@ -6,8 +12,8 @@ namespace seneca {
 
 	void Item::setName(const char* name) {
 		if (name != nullptr && name[0] != '\0') {
-			strncpy(m_itemName, name, 20);
-			m_itemName[20] = '\0';
+			strncpy(m_itemName, name, MAX_ITEMNAME_LENGTH);
+			m_itemName[MAX_ITEMNAME_LENGTH-1] = '\0';
 		}
 		else {
 			m_itemName[0] = '\0';
@@ -15,7 +21,7 @@ namespace seneca {
 	}
 
 	void Item::setEmpty() {
-		setName('\0');
+		setName("\0");
 		m_price = 0.0;
 		m_taxed = false;
 	}
@@ -34,16 +40,25 @@ namespace seneca {
 	void Item::display() const {
 		if (isValid()) {
 			cout << "| ";
-			cout.width(20);
+			cout.width(MAX_ITEMNAME_LENGTH);
 			cout.setf(ios::left);
 			cout.fill('.');
 			cout << m_itemName;
+			cout.unsetf(ios::left);
+			cout.fill(' ');
+			cout << " | ";
 			cout.width(7);
+			cout.setf(ios::right);
 			cout.setf(ios::fixed);
 			cout.precision(2);
-			cout.fill(' ');
-			cout << " | " << m_price;
-			cout << " | " << (m_taxed ? "Yes" : "No") << " |" << endl;
+			cout << m_price;
+			cout.unsetf(ios::right);
+			cout << " | ";
+			cout.setf(ios::left);
+			cout.width(3);
+			cout << (m_taxed ? "Yes" : "No");
+			cout.unsetf(ios::left);
+			cout << " |" << endl;
 		}
 		else {
 			cout << "| xxxxxxxxxxxxxxxxxxxx | xxxxxxx | xxx |" << endl;
@@ -59,6 +74,6 @@ namespace seneca {
 	}
 
 	double Item::tax() const {
-		return m_taxed ? m_price * m_taxRate : 0.0;
+		return m_taxed ? m_price * TAXRATE : 0.0;
 	}
 }
