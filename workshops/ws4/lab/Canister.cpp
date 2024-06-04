@@ -138,7 +138,7 @@ namespace seneca {
 	}
 
 	double Canister::capacity()const {
-		return M_PI * (m_height - 0.267) * (m_diameter * 0.5) * (m_diameter * 0.5);
+		return M_PI * (m_height - 0.267) * (m_diameter / 2) * (m_diameter / 2);
 	}
 
 	void Canister::clear() {
