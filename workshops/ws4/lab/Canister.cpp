@@ -79,10 +79,7 @@ namespace seneca {
 	}
 
 	Canister& Canister::pour(Canister& C) {
-		if (!isEmpty() && !hasSameContent(C)) {
-			m_usable = false;
-		}
-		else if (m_usable && C.m_usable) {
+		if (m_usable && C.m_usable) {
 			setContent(C.m_contentName);
 			double availableSpace = capacity() - m_contentVolume;
 			if (C.m_contentVolume > availableSpace) {
@@ -90,9 +87,12 @@ namespace seneca {
 				m_contentVolume = capacity();
 			}
 			else {
-				m_contentVolume += C.m_contentVolume;
+				pour(C.m_contentVolume);
 				C.m_contentVolume = 0.0;
 			}
+		}
+		if (!isEmpty() && !hasSameContent(C)) {
+			m_usable = false;
 		}
 		return *this;
 	}
@@ -123,9 +123,13 @@ namespace seneca {
 	}
 
 	void Canister::clear() {
-		delete[] m_contentName;
-		m_contentName = nullptr;
+		clearName();
 		m_contentVolume = 0.0;
 		m_usable = true;
+	}
+
+	void Canister::clearName() {
+		delete[] m_contentName;
+		m_contentName = nullptr;
 	}
 }
