@@ -4,6 +4,7 @@
 namespace seneca {
 
     const double MIN_QUANTITY = 0.00001;
+    const double PI = 3.14159265;
 
    class Canister {
       char* m_contentName;

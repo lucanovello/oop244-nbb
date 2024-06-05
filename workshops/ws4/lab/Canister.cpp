@@ -1,17 +1,15 @@
 #define _CRT_SECURE_NO_WARNINGS
-#define _USE_MATH_DEFINES
 #include <istream>
 #include <iomanip>
 #include <cstring>
-#include <cmath>
 #include "Canister.h"
 using namespace std;
 namespace seneca {
 
 	void Canister::setToDefault() {
 		m_contentName = nullptr;
-		m_diameter = 10.0;
 		m_height = 13.0;
+		m_diameter = 10.0;
 		m_contentVolume = 0.0;
 		m_usable = true;
 	}
@@ -20,15 +18,13 @@ namespace seneca {
 		return m_contentVolume < MIN_QUANTITY;
 	}
 
-	bool Canister::hasSameContent(const Canister& C)const {
-		return strcmp(m_contentName, C.m_contentName) == 0;
+	bool Canister::hasSameContent(const Canister& C) const {
+		return m_contentName != nullptr && C.m_contentName != nullptr && strcmp(m_contentName, C.m_contentName) == 0;
 	}
 
 	void Canister::setName(const char* Cstr) {
 		if (m_usable && Cstr != nullptr) {
-			if (m_contentName != nullptr) {
-				clearName();
-			}
+			delete[] m_contentName;
 			m_contentName = new char[strlen(Cstr) + 1];
 			strcpy(m_contentName, Cstr);
 		}
@@ -40,34 +36,23 @@ namespace seneca {
 
 	Canister::Canister(const char* contentName) {
 		setToDefault();
-		if (contentName != nullptr) {
-			setName(contentName);
-		}
+		setName(contentName);
 	}
 
 	Canister::Canister(double height, double diameter, const char* contentName) {
 		setToDefault();
-		if (height >= 10.0 && height <= 40.0) {
+		if (height >= 10.0 && height <= 40.0 && diameter >= 10.0 && diameter <= 30.0) {
 			m_height = height;
-		}
-		else {
-			m_usable = false;
-		}
-		if (diameter >= 10.0 && diameter <= 30.0) {
 			m_diameter = diameter;
+			setName(contentName);
 		}
 		else {
 			m_usable = false;
-		}
-		if (m_usable && contentName != nullptr) {
-			setName(contentName);
 		}
 	}
 
 	Canister::~Canister() {
-		if (m_contentName != nullptr) {
-			clearName();
-		}
+		delete[] m_contentName;
 	}
 
 	Canister& Canister::setContent(const char* contentName) {
@@ -77,46 +62,42 @@ namespace seneca {
 		else if (isEmpty()) {
 			setName(contentName);
 		}
-		else if (strcmp(m_contentName, contentName)) {
+		else if (!hasSameContent(*this)) {
 			m_usable = false;
 		}
 		return *this;
 	}
 
 	Canister& Canister::pour(double quantity) {
-		if (m_usable && quantity > 0.0) {
+		if (m_usable && quantity > 0 && (m_contentVolume + quantity) <= capacity()) {
 			m_contentVolume += quantity;
-			if (m_contentVolume > capacity()) {
-				m_contentVolume = capacity();
-				m_usable = false;
-			}
+		}
+		else {
+			m_usable = false;
 		}
 		return *this;
 	}
 
 	Canister& Canister::pour(Canister& C) {
-		if (m_usable && C.m_usable) {
-			if (isEmpty() || hasSameContent(C)) {
-				setContent(C.m_contentName);
-				double availableSpace = capacity() - m_contentVolume;
-				if (C.m_contentVolume > availableSpace) {
-					C.m_contentVolume -= availableSpace;
-					m_contentVolume = capacity();
-					m_usable = false;
-				}
-				else {
-					m_contentVolume += C.m_contentVolume;
-					C.m_contentVolume = 0.0;
-				}
+		if (!isEmpty() && !hasSameContent(C)) {
+			m_usable = false;
+		}
+		else if (m_usable && C.m_usable) {
+			setContent(C.m_contentName);
+			double availableSpace = capacity() - m_contentVolume;
+			if (C.m_contentVolume > availableSpace) {
+				C.m_contentVolume -= availableSpace;
+				m_contentVolume = capacity();
 			}
 			else {
-				m_usable = false;
+				m_contentVolume += C.m_contentVolume;
+				C.m_contentVolume = 0.0;
 			}
 		}
 		return *this;
 	}
 
-	double Canister::volume()const {
+	double Canister::volume() const {
 		return m_contentVolume;
 	}
 
@@ -137,20 +118,14 @@ namespace seneca {
 		return std::cout;
 	}
 
-	double Canister::capacity()const {
-		return M_PI * (m_height - 0.267) * (m_diameter / 2) * (m_diameter / 2);
+	double Canister::capacity() const {
+		return PI * (m_height - 0.267) * (m_diameter / 2) * (m_diameter / 2);
 	}
 
 	void Canister::clear() {
-		if (m_contentName != nullptr) {
-			clearName();
-		}
-		m_contentVolume = 0.0;
-		m_usable = true;
-	}
-
-	void Canister::clearName() {
 		delete[] m_contentName;
 		m_contentName = nullptr;
+		m_contentVolume = 0.0;
+		m_usable = true;
 	}
 }
