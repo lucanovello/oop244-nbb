@@ -1,81 +1,83 @@
 #include <iostream>
-#include <locale>
-#ifdef _WIN32
-#define NOMINMAX // Prevent windows.h from defining min and max macros
-#include <windows.h>
-#endif
+#include <stdlib.h>
+
 using namespace std;
 
-const int NG = 20;
 
-class Student {
-	int no;
-	double grades[NG];
-	int ng;
+class Numbers {
+	int nums;
+	int min_number = 1;
+	int max_number = 1000;
+	int* numbers;
 public:
-	Student();
-	~Student();
+	Numbers(int = 0);
+	~Numbers();
+	void initNumbers();
+	void setNums(int n);
+	int getNums();
+	int getMaxNums();
+	void setNumbers(int n);
+	int getNumbers();
+	void display();
+
 };
-
-Student::Student() {
-	no = 0;
-	ng = 0;
+Numbers::Numbers(int n) {
+	nums = n;
+	numbers = nullptr;
+}
+Numbers::~Numbers() {
+	delete numbers;
+}
+void Numbers::setNums(int n) {
+	nums = n;
+}
+int Numbers::getNums() {
+	return nums;
+}
+int Numbers::getMaxNums() {
+	return max_number;
+}
+void Numbers::setNumbers(int n) {
+	for (int i = 0; i < n; i++)	{
+		// numbers[i] = rand() % max_number + min_number;
+		// numbers[i] = i;
+		numbers[i] = nums - i - 1;
+	}
+}
+int Numbers::getNumbers() {
+	return *numbers;
+}
+void Numbers::display() {
+	for (int i = 0; i < nums; i++) {
+		cout << "[" << numbers[i] << "]";
+	}
+}
+void Numbers::initNumbers() {
+	numbers = new int[nums];
 }
 
-Student::~Student() {
-	// No need to delete grades since it was not allocated with new
-}
+
+
 
 int main() {
-	int num = 0;
-	double nums[NG];
-	// On Windows, set the console to UTF-8 code page
-	#ifdef _WIN32
-	SetConsoleOutputCP(CP_UTF8);
-	#endif
+	Numbers numbers;
 
-	// Set the locale to the user's default locale
-	std::locale::global(std::locale(""));
-
-	cout.setf(iostream::fixed);
-	cout.precision(2);
-
-	while (num < 1 || num > NG) {
-		cout << "Enter the number of numbers (must be between 1-" << NG << "): ";
-		cin >> num;
-
-		if (cin.fail() || num < 1 || num > NG) {
+	while (numbers.getNums() < 1 || numbers.getNums() > numbers.getMaxNums()) {
+		int n;
+		cout << "Enter the number of numbers (must be between 1-" << numbers.getMaxNums() << "): ";
+		cin >> n;
+		numbers.setNums(n);
+		if (cin.fail() || numbers.getNums() < 1 || numbers.getNums() > numbers.getMaxNums()) {
 			cin.clear(); // Clear the error flag
 			cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Ignore the invalid input
-			num = 0; // Reset num to stay in the loop
-			cout << "Invalid input. Please enter a valid integer." << endl;
+			numbers.setNums(0); // Reset num to stay in the loop
+			cout << "Invalid input. ";
 		}
 	}
-
-	for (int i = 0; i < num; i++) {
-		double number;
-		while (true) {
-			cout << "Enter number " << i + 1 << " of " << num << ": ";
-			cin >> number;
-
-			if (cin.fail()) {
-				cin.clear(); // Clear the error flag
-				cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Ignore the invalid input
-				cout << "Invalid input. Please enter a number." << endl;
-			}
-			else {
-				nums[i] = number;
-				cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Ignore any extra input
-				break;
-			}
-		}
-	}
-
-	cout << "\nYou entered: \n";
-	for (int i = 0; i < num; i++) {
-		cout << " \u2022 " << nums[i] << endl;
-	}
-	cout << endl;
-
+	numbers.initNumbers();
+	cout << "\nYour numbers are: " << endl;
+	numbers.setNumbers(numbers.getNums());
+	numbers.display();
+	cout << ".......\n\nBOOM!!!\n\n";
 	return 0;
 }
