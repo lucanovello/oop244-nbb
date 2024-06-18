@@ -3,12 +3,12 @@
 
 using namespace std;
 
-
 class Numbers {
 	int nums;
 	int min_number = 1;
 	int max_number = 1000;
 	int* numbers;
+	char* name;
 public:
 	Numbers(int = 0);
 	~Numbers();
@@ -24,6 +24,7 @@ public:
 Numbers::Numbers(int n) {
 	nums = n;
 	numbers = nullptr;
+	name = nullptr;
 }
 Numbers::~Numbers() {
 	delete numbers;
@@ -50,14 +51,12 @@ int Numbers::getNumbers() {
 void Numbers::display() {
 	for (int i = 0; i < nums; i++) {
 		cout << "[" << numbers[i] << "]";
+		//if ((i + 1) % 20 == 0) cout << endl;
 	}
 }
 void Numbers::initNumbers() {
 	numbers = new int[nums];
 }
-
-
-
 
 int main() {
 	Numbers numbers;
@@ -78,6 +77,6 @@ int main() {
 	cout << "\nYour numbers are: " << endl;
 	numbers.setNumbers(numbers.getNums());
 	numbers.display();
-	cout << ".......\n\nBOOM!!!\n\n";
+	cout << ".......\n\nEnd!!!\n\n";
 	return 0;
 }
