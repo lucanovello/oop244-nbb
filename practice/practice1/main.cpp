@@ -1,82 +1,35 @@
 #include <iostream>
-#include <stdlib.h>
 
-using namespace std;
+usingnamespace std;
 
-class Numbers {
-	int nums;
-	int min_number = 1;
-	int max_number = 1000;
-	int* numbers;
-	char* name;
+classNumber{
+
+int num;
+
 public:
-	Numbers(int = 0);
-	~Numbers();
-	void initNumbers();
-	void setNums(int n);
-	int getNums();
-	int getMaxNums();
-	void setNumbers(int n);
-	int getNumbers();
-	void display();
+
+Number(int n) {
+
+num = n;
+
+}
+
+int getNum() const {
+
+return num;
+
+}
 
 };
-Numbers::Numbers(int n) {
-	nums = n;
-	numbers = nullptr;
-	name = nullptr;
-}
-Numbers::~Numbers() {
-	delete numbers;
-}
-void Numbers::setNums(int n) {
-	nums = n;
-}
-int Numbers::getNums() {
-	return nums;
-}
-int Numbers::getMaxNums() {
-	return max_number;
-}
-void Numbers::setNumbers(int n) {
-	for (int i = 0; i < n; i++)	{
-		// numbers[i] = rand() % max_number + min_number;
-		// numbers[i] = i;
-		numbers[i] = nums - i - 1;
-	}
-}
-int Numbers::getNumbers() {
-	return *numbers;
-}
-void Numbers::display() {
-	for (int i = 0; i < nums; i++) {
-		cout << "[" << numbers[i] << "]";
-		//if ((i + 1) % 20 == 0) cout << endl;
-	}
-}
-void Numbers::initNumbers() {
-	numbers = new int[nums];
-}
 
 int main() {
-	Numbers numbers;
 
-	while (numbers.getNums() < 1 || numbers.getNums() > numbers.getMaxNums()) {
-		int n;
-		cout << "Enter the number of numbers (must be between 1-" << numbers.getMaxNums() << "): ";
-		cin >> n;
-		numbers.setNums(n);
-		if (cin.fail() || numbers.getNums() < 1 || numbers.getNums() > numbers.getMaxNums()) {
-			cin.clear(); // Clear the error flag
-			cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Ignore the invalid input
-			numbers.setNums(0); // Reset num to stay in the loop
-			cout << "Invalid input. ";
-		}
-	}
-	numbers.initNumbers();
-	cout << "\nYour numbers are: " << endl;
-	numbers.setNumbers(numbers.getNums());
-	numbers.display();
-	cout << ".......\n\nEnd!!!\n\n";
-	return 0;
+	const Number n1(5);
+
+	Number n2(10);
+
+	const Number& ref = n2;
+
+	cout << n1.getNum() + ref.getNum() << endl; return0;
+
 }
