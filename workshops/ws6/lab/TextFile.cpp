@@ -23,6 +23,7 @@ namespace seneca {
 		strcpy(m_value, lineContent);
 		return *this;
 	}
+
 	// TEXTFILE ----------------------------------------------------------
     void TextFile::setFilename(const char* fname, bool isCopy) {
         delete[] m_filename;
@@ -58,7 +59,6 @@ namespace seneca {
 
     void TextFile::loadText() {
         if (!m_filename) return;
-
         delete[] m_textLines;
         m_textLines = new Line[m_noOfLines];
 
@@ -169,4 +169,5 @@ namespace seneca {
     std::istream& operator>>(std::istream& istr, TextFile& text) {
         return text.getFile(istr);
     }
+
 }
