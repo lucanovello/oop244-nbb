@@ -9,11 +9,11 @@ namespace seneca {
     public:
         Line();
         ~Line();
-        operator const char* () const;
+        operator const char* ()const;
         Line& operator=(const char* lineContent);
-        Line(const Line&) = delete; // Disallow copying
-        Line& operator=(const Line&) = delete;
         friend class TextFile;
+        Line(const Line&) = delete;
+        Line& operator=(const Line&) = delete;
    };
    // TEXTFILE ------------------------------------------
     class TextFile {
@@ -22,25 +22,26 @@ namespace seneca {
         unsigned m_noOfLines;
         unsigned m_pageSize;
 
-        void setEmpty();
         void setFilename(const char* fname, bool isCopy = false);
         void setNoOfLines();
         void loadText();
-        void saveAs(const char* fileName) const;
+        void saveAs(const char* fileName)const;
+        void setEmpty();
         void setDefault(unsigned pageSize = DEF_PAGE_SIZE);
     public:
-        TextFile(unsigned pageSize = DEF_PAGE_SIZE);
-        TextFile(const char* filename, unsigned pageSize = DEF_PAGE_SIZE);
-        TextFile(const TextFile& other);
-        TextFile& operator=(const TextFile& other);
+        TextFile(unsigned pageSize = 15);
+        TextFile(const char* filename, unsigned pageSize = 15);
+        TextFile(const TextFile&);
+        TextFile& operator=(const TextFile&);
         ~TextFile();
-        unsigned lines() const;
-        const char* name() const;
-        operator bool() const;
-        const char* operator[](unsigned index) const;
-        std::ostream& view(std::ostream& ostr) const;
+        std::ostream& view(std::ostream& ostr)const;
         std::istream& getFile(std::istream& istr);
+        operator bool()const;
+        unsigned lines()const;
+        const char* name()const;
+        const char* operator[](unsigned index)const;
     };
+
     std::ostream& operator<<(std::ostream& ostr, const TextFile& text);
     std::istream& operator>>(std::istream& istr, TextFile& text);
 }
