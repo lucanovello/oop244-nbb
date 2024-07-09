@@ -18,23 +18,11 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="TextFile.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="TextFile.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="..\..\..\..\OOP-Workshops\WS06\lab\echoesOriginal.txt" />
-    <Text Include="..\..\..\..\OOP-Workshops\WS06\lab\seamusOriginal.txt" />
-    <Text Include="correct_output.txt" />
-  </ItemGroup>
   <PropertyGroup Label="Globals">
-    <VCProjectVersion>16.0</VCProjectVersion>
+    <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{5f1cca09-cc06-413c-90c8-f710f6c9b14c}</ProjectGuid>
-    <RootNamespace>lab</RootNamespace>
+    <ProjectGuid>{543ff41a-8d42-4d4e-bf40-50cda935d059}</ProjectGuid>
+    <RootNamespace>ms1</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -82,18 +70,6 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <LinkIncremental>true</LinkIncremental>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <LinkIncremental>false</LinkIncremental>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <LinkIncremental>true</LinkIncremental>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <LinkIncremental>false</LinkIncremental>
-  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
@@ -150,6 +126,20 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\OOP-Project\MS1\Date.cpp" />
+    <ClCompile Include="..\..\..\..\OOP-Project\MS1\Menu.cpp" />
+    <ClCompile Include="..\..\..\..\OOP-Project\MS1\ms1_tester.cpp" />
+    <ClCompile Include="..\..\..\..\OOP-Project\MS1\Utils.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\OOP-Project\MS1\Date.h" />
+    <ClInclude Include="..\..\..\..\OOP-Project\MS1\Menu.h" />
+    <ClInclude Include="..\..\..\..\OOP-Project\MS1\Utils.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\..\OOP-Project\MS1\ms1_tester_output.md" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

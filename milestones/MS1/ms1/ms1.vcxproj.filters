@@ -15,27 +15,33 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="TextFile.h">
+    <ClCompile Include="..\..\..\..\OOP-Project\MS1\Date.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\OOP-Project\MS1\Menu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\OOP-Project\MS1\Utils.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\OOP-Project\MS1\ms1_tester.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\OOP-Project\MS1\Date.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\OOP-Project\MS1\Menu.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\OOP-Project\MS1\Utils.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="TextFile.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="correct_output.txt">
+    <None Include="..\..\..\..\OOP-Project\MS1\ms1_tester_output.md">
       <Filter>Resource Files</Filter>
-    </Text>
-    <Text Include="..\..\..\..\OOP-Workshops\WS06\lab\echoesOriginal.txt">
-      <Filter>Resource Files</Filter>
-    </Text>
-    <Text Include="..\..\..\..\OOP-Workshops\WS06\lab\seamusOriginal.txt">
-      <Filter>Resource Files</Filter>
-    </Text>
+    </None>
   </ItemGroup>
 </Project>
