@@ -106,13 +106,22 @@ namespace seneca {
         }
     }
 
-    TextFile& TextFile::operator=(const TextFile& src) {
-        if (this != &src && src) {
-            setEmpty();
-            setFilename(src.m_filename, true);
-            src.saveAs(m_filename);
-            setNoOfLines();
-            loadText();
+    TextFile& TextFile::operator=(const TextFile& src)
+    {
+        if (this != &src) {
+            if (m_textLines != nullptr) {
+                delete[] m_textLines;
+                m_textLines = nullptr;
+            }
+            if (src.m_textLines && src.m_noOfLines > 0) {
+                this->m_noOfLines = src.m_noOfLines;
+                m_textLines = new Line[m_noOfLines];
+                for (unsigned i = 0; i < m_noOfLines; i++) {
+                    m_textLines[i].m_value = new char[strlen(src.m_textLines[i].m_value) + 1];
+                    strcpy(m_textLines[i].m_value, src.m_textLines[i].m_value);
+                }
+                saveAs(m_filename);
+            }
         }
         return *this;
     }
