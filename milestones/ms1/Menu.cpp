@@ -96,10 +96,6 @@ namespace seneca {
 		return *this;
 	}
 
-	int Menu::operator~() const {
-		return run();
-	}
-
 	Menu::operator unsigned int() const {
 		return m_numItems;
 	}
@@ -119,4 +115,9 @@ namespace seneca {
 	std::ostream& operator<<(std::ostream& os, const Menu& menu) {
 		return menu.display(os);
 	}
+
+	int operator~(const Menu& menu) {
+		return menu.run();
+	}
+
 }

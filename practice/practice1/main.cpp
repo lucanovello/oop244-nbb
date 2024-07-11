@@ -1,35 +1,63 @@
 #include <iostream>
 
-usingnamespace std;
+using namespace std;
 
-classNumber{
 
-int num;
+
+class Animal {
 
 public:
 
-Number(int n) {
-
-num = n;
-
-}
-
-int getNum() const {
-
-return num;
-
-}
+    virtual void makeSound() { cout << "Generic animal sound" << endl; }
 
 };
 
+
+
+class Dog : public Animal {
+
+public:
+
+    void makeSound() override { cout << "Woof" << endl; }
+
+};
+
+
+
+class Cat : public Animal {
+
+public:
+
+    void makeSound() override { cout << "Meow" << endl; }
+
+};
+
+
+
+void playSound(Animal* a) {
+
+    a->makeSound();
+
+}
+
+
+
 int main() {
 
-	const Number n1(5);
+    Animal* animals[] = { new Dog(), new Cat(), new Animal() };
 
-	Number n2(10);
+    for (int i = 0; i < 3; ++i) {
 
-	const Number& ref = n2;
+        playSound(animals[i]);
 
-	cout << n1.getNum() + ref.getNum() << endl; return0;
+    }
+
+    for (int i = 0; i < 3; ++i) {
+
+        delete animals[i];
+
+    }
+
+    return 0;
 
 }
