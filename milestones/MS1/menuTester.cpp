@@ -1,8 +1,8 @@
 // Final Project
 // Menu Module
-// File	menuTester.cpp
-// Version 1.0
-// Author	Fardad Soleimanloo
+// File:	menuTester.cpp
+// Version: 1.0
+// Author:	Fardad Soleimanloo
 // Revision History
 // -----------------------------------------------------------
 // Name               Date                 Reason
@@ -35,7 +35,7 @@ int main() {
          selections[s - 1]++;
          cout << "you chose " << m1[s - 1] << endl;
       }
-   } while (s != 0 || ~m2 != 0);
+   } while (s != 0 || !m2 != 0);
    showOrder(selections, m1);
    return 0;
 }

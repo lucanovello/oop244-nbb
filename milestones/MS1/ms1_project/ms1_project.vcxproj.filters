@@ -15,32 +15,32 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\OOP-Project\MS1\Date.cpp">
+    <ClCompile Include="..\Date.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\OOP-Project\MS1\Menu.cpp">
+    <ClCompile Include="..\Menu.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\OOP-Project\MS1\Utils.cpp">
+    <ClCompile Include="..\menuTester.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\OOP-Project\MS1\ms1_tester.cpp">
+    <ClCompile Include="..\Utils.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\..\OOP-Project\MS1\Date.h">
+    <ClInclude Include="..\Date.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\OOP-Project\MS1\Menu.h">
+    <ClInclude Include="..\Menu.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\OOP-Project\MS1\Utils.h">
+    <ClInclude Include="..\Utils.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\..\..\OOP-Project\MS1\ms1_tester_output.md">
+    <None Include="..\ms1_tester_output.md">
       <Filter>Resource Files</Filter>
     </None>
   </ItemGroup>

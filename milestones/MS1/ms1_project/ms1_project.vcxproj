@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{543ff41a-8d42-4d4e-bf40-50cda935d059}</ProjectGuid>
-    <RootNamespace>ms1</RootNamespace>
+    <ProjectGuid>{ef2c18c9-fa71-417a-9109-b32dbb16c2c9}</ProjectGuid>
+    <RootNamespace>ms1project</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -127,18 +127,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\OOP-Project\MS1\Date.cpp" />
-    <ClCompile Include="..\..\..\..\OOP-Project\MS1\Menu.cpp" />
-    <ClCompile Include="..\..\..\..\OOP-Project\MS1\ms1_tester.cpp" />
-    <ClCompile Include="..\..\..\..\OOP-Project\MS1\Utils.cpp" />
+    <ClCompile Include="..\Date.cpp" />
+    <ClCompile Include="..\Menu.cpp" />
+    <ClCompile Include="..\menuTester.cpp" />
+    <ClCompile Include="..\Utils.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\..\OOP-Project\MS1\Date.h" />
-    <ClInclude Include="..\..\..\..\OOP-Project\MS1\Menu.h" />
-    <ClInclude Include="..\..\..\..\OOP-Project\MS1\Utils.h" />
+    <ClInclude Include="..\Date.h" />
+    <ClInclude Include="..\Menu.h" />
+    <ClInclude Include="..\Utils.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\..\..\OOP-Project\MS1\ms1_tester_output.md" />
+    <None Include="..\ms1_tester_output.md" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

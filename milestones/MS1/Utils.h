@@ -1,17 +1,14 @@
-/***********************************************************************
-// OOP244 Utils Module
-// File	Utils.h
-// Version 
-// Date	
-// Author	
-// Description
-//
+/////////////////////////////////////////////////////////////////
+// Final Project Milestone 1 
+// Utils Module
+// File:	Utils.h
+// Version:	1.0
+// Author:	Luca Novello
 // Revision History
 // -----------------------------------------------------------
-// Name            Date            Reason
+// Name               Date                 Reason
 // 
 /////////////////////////////////////////////////////////////////
-***********************************************************************/
 #ifndef SENECA_UTILS_H__
 #define SENECA_UTILS_H__
 
