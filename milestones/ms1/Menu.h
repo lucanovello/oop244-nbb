@@ -41,6 +41,7 @@ namespace seneca {
         std::ostream& display(std::ostream& os) const;
         unsigned int run() const;
         Menu& operator<<(const char* menuItemContent);
+        int operator~() const;
         operator unsigned int() const;
         operator int() const;
         operator bool() const;
