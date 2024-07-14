@@ -15,7 +15,7 @@ namespace seneca {
         if (strcmp(address, newAddress) != 0) {
             std::cout << '|' << std::right << std::setw(8) << licensePlate << "| |"
                 << std::right << std::setw(20) << address << " ---> "
-                << std::left << std::setw(20) << std::left << newAddress << std::endl;
+                << std::left << std::setw(20) << std::left << newAddress << "    |" << std::endl;
             strncpy(address, newAddress, 63);
             address[63] = '\0';
         }
