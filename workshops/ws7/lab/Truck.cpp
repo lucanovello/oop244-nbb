@@ -9,8 +9,12 @@ namespace seneca {
     }
 
     bool Truck::addCargo(double cargo) {
-        if (cargoLoad + cargo <= capacity) {
+        if (cargo > 0 && cargoLoad < capacity) {
+            if (cargoLoad + cargo >= capacity) {
+				cargoLoad = capacity;
+            } else {
             cargoLoad += cargo;
+            }
             return true;
         }
         return false;

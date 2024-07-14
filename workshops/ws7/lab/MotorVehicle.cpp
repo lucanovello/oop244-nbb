@@ -13,7 +13,7 @@ namespace seneca {
 
     void MotorVehicle::moveTo(const char* newAddress) {
         if (strcmp(address, newAddress) != 0) {
-            std::cout << '|' << std::setw(8) << licensePlate << '|'
+            std::cout << '|' << std::right << std::setw(8) << licensePlate << '|'
                 << std::right << std::setw(20) << address << " ---> "
                 << std::left << std::setw(20) << std::left << newAddress << std::endl;
             strncpy(address, newAddress, 63);
