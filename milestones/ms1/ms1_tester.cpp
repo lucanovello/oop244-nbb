@@ -12,7 +12,7 @@
 #include "Utils.h"
 
 //Please use putty for termial client on Matrix (https://www.putty.org/)
-//#define SENECA_LINUX  // Comment this to run on windows, 
+#define SENECA_LINUX  // Comment this to run on windows, 
                       // Uncommnet the above line to run on linux
 
 #ifdef SENECA_LINUX  // Linux or Mac Console Colors
