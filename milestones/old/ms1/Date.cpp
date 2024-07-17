@@ -99,10 +99,9 @@ namespace seneca {
     is >> m_year >> separator >> m_mon >> separator >> m_day;
 
     if (is.fail()) {
-        errCode(CIN_FAILED); // CIN_FAILED
+        // errCode(CIN_FAILED); 
         is.clear();
-        std::cerr << "cin Failed" << std::endl; // Custom error message
-        // Do not call errCode(CIN_FAILED) here if it also prints "Cin Failed"
+        std::cerr << "cin Failed" << std::endl;
     } else {
         validate();
     }
