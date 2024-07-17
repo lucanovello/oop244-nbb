@@ -94,21 +94,22 @@ namespace seneca {
     }
 
     std::istream& Date::read(std::istream& is) {
-        errCode(NO_ERROR); // Clears the error code
+        errCode(NO_ERROR); 
         char separator;
         is >> m_year >> separator >> m_mon >> separator >> m_day;
 
         if (is.fail()) {
-            errCode(CIN_FAILED); // CIN_FAILED
+            errCode(CIN_FAILED); 
             is.clear();
+            std::cerr << "cin Failed" << std::endl; 
         }
         else {
             validate();
         }
-
-        is.ignore(1000, '\n'); // Flushes the keyboard
+        is.ignore(1000, '\n'); 
         return is;
     }
+
 
     std::ostream& Date::write(std::ostream& os) const {
         if (bad()) {
