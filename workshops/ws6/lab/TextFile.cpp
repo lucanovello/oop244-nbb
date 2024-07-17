@@ -138,6 +138,9 @@ namespace sdds {
                 ostr << (const char*)m_textLines[i] << endl;
                 if ((i + 1) % m_pageSize == 0) {
                     ostr << "Hit ENTER to continue...";
+                    if ((i + 1) == m_pageSize) {
+                        cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+                    }
                     cin.get();
                 }
             }
