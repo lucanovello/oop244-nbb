@@ -20,7 +20,7 @@ namespace seneca {
     const int DAY_ERROR = 4;
     const char DATE_ERROR[][16] = {
         "No Error",
-        "Cin Failed",
+        "cin Failed",
         "Year Error",
         "Month Error",
         "Day Error"
