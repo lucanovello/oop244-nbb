@@ -137,7 +137,7 @@ namespace sdds {
             for (unsigned i = 0; i < m_noOfLines; ++i) {
                 ostr << (const char*)m_textLines[i] << endl;
                 if ((i + 1) % m_pageSize == 0) {
-                    ostr << "Hit ENTER to continue..." << endl;
+                    ostr << "Hit ENTER to continue...";
                     cin.get();
                 }
             }
