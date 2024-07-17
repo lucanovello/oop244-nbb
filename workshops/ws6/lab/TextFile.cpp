@@ -3,6 +3,7 @@
 #include <fstream>
 #include <string>
 #include <cstring>
+#include <limits>
 #include "TextFile.h"
 using namespace std;
 namespace sdds {
