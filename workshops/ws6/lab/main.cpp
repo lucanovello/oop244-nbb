@@ -8,7 +8,7 @@
 #include <fstream>
 #include <string>
 #include "TextFile.h"
-using namespace seneca;
+using namespace sdds;
 using namespace std;
 
 void FirstTen(TextFile T);

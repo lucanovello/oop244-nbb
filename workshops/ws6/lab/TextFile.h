@@ -1,7 +1,7 @@
 #ifndef SENECA_TEXTFILE_H__
 #define SENECA_TEXTFILE_H__
 #include <iostream>
-namespace seneca {
+namespace sdds {
 #define DEF_PAGE_SIZE 15
     // LINE ------------------------------------------
     class Line {

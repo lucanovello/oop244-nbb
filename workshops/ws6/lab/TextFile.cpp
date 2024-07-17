@@ -5,7 +5,7 @@
 #include <cstring>
 #include "TextFile.h"
 using namespace std;
-namespace seneca {
+namespace sdds {
 	// LINE ----------------------------------------------------------
 	Line::Line() : m_value(nullptr) {}
 
