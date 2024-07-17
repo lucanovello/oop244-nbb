@@ -21,10 +21,10 @@
     <ClCompile Include="..\Menu.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\menuTester.cpp">
+    <ClCompile Include="..\Utils.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\Utils.cpp">
+    <ClCompile Include="..\menuTester.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
