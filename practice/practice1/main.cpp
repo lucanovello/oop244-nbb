@@ -4,39 +4,59 @@ using namespace std;
 
 
 
-class Animal {
+class A {
 
 public:
 
-    virtual void makeSound() { cout << "Generic animal sound" << endl; }
+	A() { cout << "A Constructor" << endl; }
+
+	virtual void f() { cout << "A::f" << endl; }
+
+	virtual void g() { cout << "A::g" << endl; }
+
+	virtual ~A() { cout << "A Destructor" << endl; }
 
 };
 
 
 
-class Dog : public Animal {
+class B : public A {
 
 public:
 
-    void makeSound() override { cout << "Woof" << endl; }
+	B() { cout << "B Constructor" << endl; }
+
+	void f() { cout << "B::f" << endl; }
+
+	void h() { cout << "B::h" << endl; }
+
+	~B() { cout << "B Destructor" << endl; }
 
 };
 
 
 
-class Cat : public Animal {
+class C : public B {
 
 public:
 
-    void makeSound() override { cout << "Meow" << endl; }
+	C() { cout << "C Constructor" << endl; }
+
+	void f() { cout << "C::f" << endl; }
+
+	void g() { cout << "C::g" << endl; }
+
+	~C() { cout << "C Destructor" << endl; }
 
 };
 
 
 
-void playSound(Animal* a) {
+void callFunctions(A* obj) {
 
-    a->makeSound();
+	obj->f();
+
+	obj->g();
 
 }
 
@@ -44,20 +64,12 @@ void playSound(Animal* a) {
 
 int main() {
 
-    Animal* animals[] = { new Dog(), new Cat(), new Animal() };
+	A* a = new C();
 
-    for (int i = 0; i < 3; ++i) {
+	callFunctions(a);
 
-        playSound(animals[i]);
+	delete a;
 
-    }
-
-    for (int i = 0; i < 3; ++i) {
-
-        delete animals[i];
-
-    }
-
-    return 0;
+	return 0;
 
 }
