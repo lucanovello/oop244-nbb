@@ -40,13 +40,13 @@ namespace seneca {
         ~Menu();
         std::ostream& display(std::ostream& os) const;
         unsigned int run() const;
+        friend std::ostream& operator<<(std::ostream& os, const Menu& menu);
         Menu& operator<<(const char* menuItemContent);
         friend int operator~(const Menu&);
         operator unsigned int() const;
         operator int() const;
         operator bool() const;
         const char* operator[](unsigned int index) const;
-        friend std::ostream& operator<<(std::ostream& os, const Menu& menu);
     };
     int operator~(const Menu&);
 }

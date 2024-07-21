@@ -61,13 +61,13 @@ namespace seneca {
     void Menu::displayTitle(std::ostream& os) const {
         if (m_title) {
             m_title.display(os);
-            os << ":" << std::endl;
         }
     }
 
     std::ostream& Menu::display(std::ostream& os) const {
         if (m_numItems > 0) {
             displayTitle(os);
+            os << ":" << std::endl;
             for (unsigned int i = 0; i < m_numItems; ++i) {
                 os.width(2);
                 os << (i + 1) << "- " << m_items[i]->m_content << std::endl;
@@ -101,6 +101,10 @@ namespace seneca {
         }
         return *this;
     }
+    std::ostream& operator<<(std::ostream& os, const Menu& menu) {
+        menu.displayTitle(os);
+        return os;
+    }
 
     Menu::operator unsigned int() const {
         return m_numItems;
@@ -118,9 +122,6 @@ namespace seneca {
         return *m_items[index % m_numItems];
     }
 
-    std::ostream& operator<<(std::ostream& os, const Menu& menu) {
-        return menu.display(os);
-    }
 
     int operator~(const Menu& menu) {
         return menu.run();
