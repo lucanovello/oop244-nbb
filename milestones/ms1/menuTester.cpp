@@ -1,8 +1,8 @@
 // Final Project
 // Menu Module
-// File	menuTester.cpp
-// Version 1.0
-// Author	Fardad Soleimanloo
+// File:	menuTester.cpp
+// Version: 1.0
+// Author:	Fardad Soleimanloo
 // Revision History
 // -----------------------------------------------------------
 // Name               Date                 Reason

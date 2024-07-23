@@ -1,12 +1,13 @@
+/////////////////////////////////////////////////////////////////
 // Final Project Milestone 1 
 // Date Module
-// File	Date.h
-// Version 1.0
-// Author	Fardad Soleimanloo
+// File:    Date.h
+// Version: 1.0
+// Author:	Fardad Soleimanloo
 // Revision History
 // -----------------------------------------------------------
 // Name               Date                 Reason
-// 
+// Luca Novello     2024-07-1           Milestone 1
 /////////////////////////////////////////////////////////////////
 #ifndef SENECA_DATE_H__
 #define SENECA_DATE_H__
@@ -24,15 +25,16 @@ namespace seneca {
       "Bad Month Value",
       "Bad Day Value"
    };
-   const int  MIN_YEAR = 1500;
-   class Date {
-   private:
-      int m_year;
-      int m_mon;
-      int m_day;
-      int m_ErrorCode;
-      int m_CUR_YEAR;
-      int daysSince0001_1_1()const; // returns number of days passed since the date 0001/1/1
+    const int MIN_YEAR = 1500;
+
+    class Date {
+        int m_year;
+        int m_mon;
+        int m_day;
+        int m_ErrorCode;
+        int m_CUR_YEAR;
+
+ int daysSince0001_1_1()const; // returns number of days passed since the date 0001/1/1
       bool validate();             /* validates the date setting the error code and then returning the result 
                                     true, if valid, and false if invalid.*/
       void errCode(int);           // sets the error code
@@ -48,10 +50,20 @@ namespace seneca {
       int errCode()const;         // returns the error code or zero if date is valid
       const char* dateStatus()const;  // returns a string corresponding the current status of the date
       int currentYear()const;         // returns the m_CUR_YEAR value;
+        std::istream& read(std::istream& is = std::cin);
+        std::ostream& write(std::ostream& os = std::cout)const;
 
-      
-   };
-   std::ostream& operator<<(std::ostream& os, const Date& RO);
-   std::istream& operator>>(std::istream& is, Date& RO);
+        bool operator==(const Date& other) const;
+        bool operator!=(const Date& other) const;
+        bool operator>=(const Date& other) const;
+        bool operator<=(const Date& other) const;
+        bool operator<(const Date& other) const;
+        bool operator>(const Date& other) const;
+        int operator-(const Date& other) const;
+        operator bool() const;
+
+        friend std::ostream& operator<<(std::ostream& os, const Date& RO);
+        friend std::istream& operator>>(std::istream& is, Date& RO);
+    };
 }
 #endif
