@@ -61,6 +61,7 @@ namespace seneca {
     void Menu::displayTitle(std::ostream& os) const {
         if (m_title) {
             m_title.display(os);
+			os << std::endl;
         }
     }
 

@@ -15,7 +15,7 @@
 namespace seneca {
    class LibApp {
        bool m_changed;
-       Menu m_mainMenu{ "Seneca Libray Application"};
+       Menu m_mainMenu;
        Menu m_exitMenu;
    private:
        bool confirm(const char* message);
