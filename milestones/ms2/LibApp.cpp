@@ -93,16 +93,16 @@ namespace seneca {
 					}
 					else if (exitSelection == 0) {
 						if (confirm("This will discard all the changes are you sure?")) {
-							std::cout << "\n-------------------------------------------" << std::endl;
-							std::cout << "Thanks for using Seneca Library Application";
 							done = true;
 						}
 					}
 				}
 				else {
+					done = true;
+				}
+				if (done) {
 					std::cout << "\n-------------------------------------------" << std::endl;
 					std::cout << "Thanks for using Seneca Library Application";
-					done = true;
 				}
 				break;
 			}
