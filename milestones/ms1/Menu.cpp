@@ -47,13 +47,13 @@ namespace seneca {
 
     // Menu Class
     Menu::Menu(const char* title) : m_title(title), m_numItems(0) {
-        for (unsigned int i = 0; i < MAX_MENU_ITEMS; ++i) {
+        for (size_t i = 0; i < MAX_MENU_ITEMS; ++i) {
             m_items[i] = nullptr;
         }
     }
 
     Menu::~Menu() {
-        for (unsigned int i = 0; i < m_numItems; ++i) {
+        for (size_t i = 0; i < m_numItems; ++i) {
             delete m_items[i];
         }
     }
@@ -67,19 +67,20 @@ namespace seneca {
     std::ostream& Menu::display(std::ostream& os) const {
         if (m_numItems > 0) {
             displayTitle(os);
-            os << ":" << std::endl;
-            for (unsigned int i = 0; i < m_numItems; ++i) {
-                os.width(2);
-                os << (i + 1) << "- " << m_items[i]->m_content << std::endl;
+            if (m_title) {
+			os << ":" << std::endl;
+			}
+            for (size_t i = 0; i < m_numItems; ++i) {
+                os << " " << (i + 1) << "- " << m_items[i]->m_content << std::endl;
             }
-            os << " 0- Exit\n > ";
+            os << " 0- Exit\n> ";
         }
         return os;
     }
 
-    unsigned int Menu::run() const {
+    size_t Menu::run() const {
         display(std::cout);
-        unsigned int selection;
+        size_t selection;
         bool valid = false;
         while (!valid) {
             std::cin >> selection;
@@ -106,7 +107,7 @@ namespace seneca {
         return os;
     }
 
-    Menu::operator unsigned int() const {
+    Menu::operator size_t() const {
         return m_numItems;
     }
 
@@ -118,7 +119,7 @@ namespace seneca {
         return m_numItems > 0;
     }
 
-    const char* Menu::operator[](unsigned int index) const {
+    const char* Menu::operator[](size_t index) const {
         return *m_items[index % m_numItems];
     }
 
