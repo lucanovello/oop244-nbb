@@ -1,0 +1,13 @@
+ms2_tester_prof.cpp: In function ‘int main()’:
+ms2_tester_prof.cpp:15:11: error: ‘class seneca::LibApp’ has no member named ‘run’
+    theApp.run();
+           ^
+ms2_tester_prof.cpp:17:11: error: ‘class seneca::LibApp’ has no member named ‘run’
+    theApp.run();
+           ^
+ms2_tester_prof.cpp:19:11: error: ‘class seneca::LibApp’ has no member named ‘run’
+    theApp.run();
+           ^
+ms2_tester_prof.cpp:21:11: error: ‘class seneca::LibApp’ has no member named ‘run’
+    theApp.run();
+           ^
