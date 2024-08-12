@@ -18,6 +18,9 @@
     <ClCompile Include="Date.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ms3_tester.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="Publication.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -25,9 +28,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Utils.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ms3_tester.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
