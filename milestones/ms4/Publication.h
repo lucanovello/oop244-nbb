@@ -1,3 +1,10 @@
+/////////////////////////////////////////////////////////////////
+// Final Project Milestone 
+// Publication Module
+// File:	Publication.h
+// Version: 1.0
+// Author:	Luca Novello
+/////////////////////////////////////////////////////////////////
 #ifndef SENECA_PUBLICATION_H
 #define SENECA_PUBLICATION_H
 #include <iostream>

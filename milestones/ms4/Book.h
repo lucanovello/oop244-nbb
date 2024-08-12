@@ -1,5 +1,12 @@
-#ifndef BOOK_H
-#define BOOK_H
+/////////////////////////////////////////////////////////////////
+// Final Project Milestone 
+// Book Module
+// File:	Book.h
+// Version: 1.0
+// Author:	Luca Novello
+/////////////////////////////////////////////////////////////////
+#ifndef SENECA_BOOK_H
+#define SENECA_BOOK_H
 #include <cstring>
 #include <iostream>
 #include "Publication.h"
@@ -20,4 +27,4 @@ namespace seneca {
         operator bool() const override;
     };
 }
-#endif // BOOK_H
+#endif // SENECA_BOOK_H

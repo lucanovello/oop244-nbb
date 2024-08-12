@@ -4,10 +4,6 @@
 // File:	Menu.cpp
 // Version: 1.0
 // Author:	Luca Novello
-// Revision History
-// -----------------------------------------------------------
-// Name               Date                 Reason
-// 
 /////////////////////////////////////////////////////////////////
 #define _CRT_SECURE_NO_WARNINGS
 #include <iostream>

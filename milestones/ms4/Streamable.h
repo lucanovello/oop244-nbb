@@ -1,3 +1,10 @@
+/////////////////////////////////////////////////////////////////
+// Final Project Milestone 
+// Streamable Module
+// File:	Streamable.h
+// Version: 1.0
+// Author:	Luca Novello
+/////////////////////////////////////////////////////////////////
 #ifndef SENECA_STREAMABLE_H
 #define SENECA_STREAMABLE_H
 #include <iostream>

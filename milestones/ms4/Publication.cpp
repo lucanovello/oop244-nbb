@@ -1,3 +1,14 @@
+/////////////////////////////////////////////////////////////////
+// Final Project Milestone
+// Publication Module
+// File:	Publication.cpp
+// Version:	1.0
+// Author:	Luca Novello
+// Revision History
+// -----------------------------------------------------------
+// Name               Date                 Reason
+// 
+/////////////////////////////////////////////////////////////////
 #define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
 #include <cstring>
@@ -39,7 +50,7 @@ namespace seneca {
     }
 
     void Publication::resetDate() {
-        m_date = Date();  // Assuming Date class has a default constructor for the current date
+        m_date = Date();
     }
 
     char Publication::type() const {
@@ -93,51 +104,43 @@ namespace seneca {
     }
 
     std::istream& Publication::read(std::istream& istr) {
-        // Clear current state and prepare for new input
+       
         delete[] m_title;
         m_title = nullptr;
         m_shelfId[0] = '\0';
         m_membership = 0;
         m_libRef = -1;
-        m_date = Date(); // Reset to current date
+        m_date = Date();
 
-        // Temporary variables for reading
         char shelfId[SENECA_SHELF_ID_LEN + 1] = { 0 };
         char title[256] = { 0 };
         int membership = 0;
         Date date;
 
-        // Check if the input is from console
         if (conIO(istr)) {
             std::cout << "Shelf No: ";
             istr.getline(shelfId, SENECA_SHELF_ID_LEN + 1);
 
-            // If the shelf ID is not exactly the expected length, set fail state
             if (strlen(shelfId) != SENECA_SHELF_ID_LEN) {
                 istr.setstate(std::ios::failbit);
                 return istr;
             }
-
             std::cout << "Title: ";
             istr.getline(title, 256);
 
             std::cout << "Date: ";
             istr >> date;
 
-            // If date is in an invalid state, set fail state
             if (!date) {
                 istr.setstate(std::ios::failbit);
                 return istr;
             }
-
-            // Only if everything is valid, proceed to assign values
             m_title = new char[strlen(title) + 1];
             strcpy(m_title, title);
             strcpy(m_shelfId, shelfId);
             m_date = date;
         }
         else {
-            // Non-console input (from file)
             istr >> m_libRef;
             istr.ignore();
             istr.getline(shelfId, SENECA_SHELF_ID_LEN + 1, '\t');
@@ -146,24 +149,18 @@ namespace seneca {
             istr.ignore();
             istr >> date;
 
-            // If date is in an invalid state, set fail state
             if (!date) {
                 istr.setstate(std::ios::failbit);
                 return istr;
             }
-
-            // Assign values only if all are valid
             m_title = new char[strlen(title) + 1];
             strcpy(m_title, title);
             strcpy(m_shelfId, shelfId);
             m_membership = membership;
             m_date = date;
         }
-
         return istr;
     }
-
-
 
     Publication::operator bool() const {
         return m_title != nullptr && m_shelfId[0] != '\0';
