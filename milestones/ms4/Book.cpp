@@ -1,22 +1,23 @@
 /////////////////////////////////////////////////////////////////
-// Final Project Milestone 
+// Final Project Milestone
 // Book Module
 // File:	Book.cpp
-// Version: 1.0
+// Version:	1.0
 // Author:	Luca Novello
+// Revision History
+// -----------------------------------------------------------
+// Name               Date                 Reason
+// 
 /////////////////////////////////////////////////////////////////
 #define _CRT_SECURE_NO_WARNINGS
+#include <iostream>
+#include <cstring>
 #include "Book.h"
-#include "Lib.h"
-#include "Publication.h"
-
+#include "Utils.h"
 
 namespace seneca {
-    Book::Book() : m_authorName(nullptr) {}
 
-    Book::~Book() {
-        delete[] m_authorName;
-    }
+    Book::Book() : m_authorName(nullptr) {}
 
     Book::Book(const Book& src) : Publication(src) {
         m_authorName = nullptr;
@@ -38,27 +39,46 @@ namespace seneca {
         return *this;
     }
 
+    Book::~Book() {
+        delete[] m_authorName;
+    }
+
     char Book::type() const {
         return 'B';
     }
 
     std::ostream& Book::write(std::ostream& os) const {
         Publication::write(os);
+
         if (conIO(os)) {
             os << " ";
+			os.fill(' ');
+            os.setf(std::ios::left);
+            os.width(SENECA_AUTHOR_WIDTH);
             if (m_authorName) {
-                os.width(SENECA_AUTHOR_WIDTH);
+                char buffer[SENECA_AUTHOR_WIDTH + 1];
+                std::strncpy(buffer, m_authorName, SENECA_AUTHOR_WIDTH);
+                buffer[SENECA_AUTHOR_WIDTH] = '\0';
                 os.setf(std::ios::left);
-                os << m_authorName;
-                os.unsetf(std::ios::left);
+				os.width(SENECA_AUTHOR_WIDTH);
+                os  << buffer;
             }
             else {
-                os << "N/A";
+                os << os.width(SENECA_AUTHOR_WIDTH) << "N/A";
             }
             os << " |";
         }
         else {
-            os << '\t' << (m_authorName ? m_authorName : "N/A");
+            os << '\t';
+            if (m_authorName) {
+                char buffer[SENECA_AUTHOR_WIDTH + 1];
+                std::strncpy(buffer, m_authorName, SENECA_AUTHOR_WIDTH);
+                buffer[SENECA_AUTHOR_WIDTH] = '\0';
+                os << buffer;
+            }
+            else {
+                os << "N/A";
+            }
         }
         return os;
     }
@@ -94,4 +114,5 @@ namespace seneca {
     Book::operator bool() const {
         return m_authorName && m_authorName[0] != '\0' && Publication::operator bool();
     }
+
 }

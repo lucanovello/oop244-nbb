@@ -7,8 +7,8 @@
 /////////////////////////////////////////////////////////////////
 #ifndef SENECA_BOOK_H
 #define SENECA_BOOK_H
-#include <cstring>
 #include <iostream>
+#include <cstring>
 #include "Publication.h"
 
 namespace seneca {

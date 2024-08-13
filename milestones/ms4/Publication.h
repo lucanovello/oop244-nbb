@@ -16,6 +16,7 @@
 namespace seneca {
 
     class Publication : public Streamable {
+    protected:
         char* m_title;
         char m_shelfId[SENECA_SHELF_ID_LEN + 1];
         int m_membership;

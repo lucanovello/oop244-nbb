@@ -84,10 +84,16 @@ namespace seneca {
     std::ostream& Publication::write(std::ostream& os) const {
         if (conIO(os)) {
             os << "| " << m_shelfId << " | ";
+            std::string titleToWrite = (m_title ? m_title : "");
+            if (titleToWrite.length() > SENECA_TITLE_WIDTH) {
+                titleToWrite = titleToWrite.substr(0, SENECA_TITLE_WIDTH);
+            }
             os.width(SENECA_TITLE_WIDTH);
             os.setf(std::ios::left);
             os.fill('.');
-            os << m_title << " | ";
+            os << titleToWrite;
+            os.unsetf(std::ios::left);
+            os << " | ";
             if (onLoan()) {
                 os << m_membership;
             }
@@ -97,11 +103,24 @@ namespace seneca {
             os << " | " << m_date << " |";
         }
         else {
-            os << type() << '\t' << m_libRef << '\t' << m_shelfId << '\t' << m_title
-                << '\t' << m_membership << '\t' << m_date;
+            os << type() << '\t' << m_libRef << '\t' << m_shelfId << '\t';
+            std::string titleToWrite = (m_title ? m_title : "N/A");
+            if (titleToWrite.length() > SENECA_TITLE_WIDTH) {
+                titleToWrite = titleToWrite.substr(0, SENECA_TITLE_WIDTH);
+            }
+            os << titleToWrite << '\t';
+            if (onLoan()) {
+                os << m_membership;
+            }
+            else {
+                os << "N/A";
+            }
+            os << '\t' << m_date;
         }
         return os;
     }
+
+
 
     std::istream& Publication::read(std::istream& istr) {
        
